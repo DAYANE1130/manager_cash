@@ -22,7 +22,12 @@ module.exports = (sequelize, DataTypes) => {
 
   Cnpj.associate = (models) => {
     Cnpj.hasOne(models.Buyer,
-      { foreignKey: 'cnpjId', as: 'buyers' });
+      { foreignKey: 'cnpjId', as: 'buyer' });
+
+    Cnpj.hasOne(models.Provider, {
+      foreignKey: 'cnpjId',
+      as: 'provider',
+    });
 
   };
   return Cnpj;

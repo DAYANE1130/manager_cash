@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Buyer = sequelize.define('Buyer', {
+  const Provider = sequelize.define('Provider', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -24,9 +24,21 @@ module.exports = (sequelize, DataTypes) => {
     neighborhood: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
+    bank: DataTypes.STRING,
+    bankAgency: DataTypes.STRING,
+    account: DataTypes.STRING,
+    documents: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
     situation: DataTypes.STRING,
     situationDate: DataTypes.STRING,
+    cnpjId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'cnpjs',
+        key: 'id',
+      },
+    },
+    email: DataTypes.STRING,
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -35,29 +47,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    cnpjId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'cnpjs',
-        key: 'id',
-      },
-    },
-    confirm: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
-    },
-    email: DataTypes.STRING,
   }, {
-    tableName: 'buyers',
+    tableName: 'providers',
     timestamps: true,
   });
 
-  Buyer.associate = (models) => {
+  Provider.associate = (models) => {
     // define o tipo de relacionamento
-    Buyer.belongsTo(models.Buyer,
+    Provider.belongsTo(models.Buyer,
       // define qual a foreign key a ser criada
       { foreignKey: 'cnpjId', as: 'cnpj' });
 
   };
-  return Buyer;
+  return Provider;
 };
