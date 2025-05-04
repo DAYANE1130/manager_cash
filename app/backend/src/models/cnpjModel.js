@@ -29,6 +29,11 @@ module.exports = (sequelize, DataTypes) => {
       as: 'provider',
     });
 
+    Cnpj.hasMany(models.Order, {
+      foreignKey: 'cnpjId',
+      as: 'orders',
+    });
+
   };
   return Cnpj;
 };

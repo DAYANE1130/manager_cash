@@ -58,6 +58,11 @@ module.exports = (sequelize, DataTypes) => {
       // define qual a foreign key a ser criada
       { foreignKey: 'cnpjId', as: 'cnpj' });
 
+    Provider.hasMany(models.Order, {
+      foreignKey: 'providerId',
+      as: 'orders',
+    });
+
   };
   return Provider;
 };

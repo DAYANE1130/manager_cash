@@ -57,6 +57,12 @@ module.exports = (sequelize, DataTypes) => {
     Buyer.belongsTo(models.Buyer,
       // define qual a foreign key a ser criada
       { foreignKey: 'cnpjId', as: 'cnpj' });
+      
+    Buyer.hasMany(models.Order, {
+      foreignKey: 'buyerId',
+      as: 'orders',
+    });
+
 
   };
   return Buyer;
