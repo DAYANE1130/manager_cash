@@ -1,5 +1,4 @@
 module.exports = (sequelize, DataTypes) => {
-
   const Cnpj = sequelize.define('Cnpj', {
     id: {
       type: DataTypes.INTEGER,
@@ -16,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   }, {
-    tableName: 'cnpjs', //nome exato da tabela no banco
+    tableName: 'cnpjs', // nome exato da tabela no banco
     timestamps: true,
   });
 
@@ -33,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'cnpjId',
       as: 'orders',
     });
-
   };
   return Cnpj;
 };

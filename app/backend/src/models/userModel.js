@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
-    cashforceAdm: { //tinyint(1) DEFAULT 0
+    cashforceAdm: { // tinyint(1) DEFAULT 0
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
@@ -44,11 +44,10 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = (models) => {
-
     User.hasMany(models.Order, {
       foreignKey: 'userId',
       as: 'orders',
     });
-  }
+  };
   return User;
 };
