@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const cnpjModel = sequelize.define('Cnpj', {
+
+  const Cnpj = sequelize.define('Cnpj', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -7,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     cnpj: {
       type: DataTypes.STRING,
+      unique: true,
       allowNull: false,
     },
     companyType: {
@@ -14,9 +16,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   }, {
-    tableName: 'cnpjs', // importante: nome exato da tabela no banco
-    timestamps: false,
+    tableName: 'cnpjs', //nome exato da tabela no banco
+    timestamps: true,
   });
 
-  return cnpjModel;
+  Cnpj.associate = (models) => {
+    Cnpj.hasOne(models.Buyer,
+      { foreignKey: 'cnpjId', as: 'buyers' });
+
+  };
+  return Cnpj;
 };
