@@ -1,7 +1,6 @@
-// src/components/Order.jsx
 import React from 'react';
 
-const Invoice = ({ order }) => {
+const Invoice = ({ order, onClickProvider }) => {
   const formatCurrency = (value) =>
     Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
@@ -23,7 +22,9 @@ const Invoice = ({ order }) => {
       <td>{formatCurrency(order.value)}</td>
       <td>{formatDate(order.emissionDate)}</td>
       <td>{getStatusLabel(order.orderStatusBuyer)}</td>
-      <button>Dados do cedente</button>
+      <td>
+        <button onClick={onClickProvider}>Dados do cedente</button>
+      </td>
     </tr>
   );
 };

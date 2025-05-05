@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import fetchOrdersApi from '../services/api';
-import Invoice from './Orders/Invoice';
+import fetchOrdersApi from '../../services/api';
+import Invoice from './Invoice';
+import ModalProvider from '../Providers/ModalProvider';
 
 const ListInvoice = () => {
   const [invoices, setInvoices] = useState([]);
-  //const [dataProviders, setDataProviders] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedProvider, setselectedProvider] = useState(null);
 
+  function handleOpenModal(provider, cnpj) {
+    setselectedProvider({...provider, cnpj});
+    setModalIsOpen(true);
+
+  }
+
+  function handleCloseModal() {
+    setModalIsOpen(false);
+    setselectedProvider(null)
+  }
+
+console.log('eusu o cnopj', invoices)
   useEffect(() => {
     const fetchData = async () => {
       const { data, erro } = await fetchOrdersApi();
@@ -39,10 +53,19 @@ const ListInvoice = () => {
         </thead>
         <tbody>
           {invoices.map((order, id) => (
-            <Invoice key={id} order={order} />
+            <Invoice
+              key={id}
+              order={order}
+              onClickProvider={() => handleOpenModal(order.provider, order.cnpj.cnpj)}
+            />
           ))}
         </tbody>
       </table>
+      <ModalProvider
+        isOpen={modalIsOpen}
+        onClose={handleCloseModal}
+        provider={selectedProvider}
+      />
     </div>
   );
 };

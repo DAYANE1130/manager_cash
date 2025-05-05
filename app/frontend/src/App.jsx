@@ -1,5 +1,5 @@
 import './App.css'
-import InvoiceList from './components/InvoiceList';
+import InvoiceList from './components/Orders/InvoiceList';
 
 function App() {
   return (
