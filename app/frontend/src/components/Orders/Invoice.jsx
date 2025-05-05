@@ -8,8 +8,8 @@ const Invoice = ({ order, onClickProvider }) => {
     new Date(date).toLocaleDateString('pt-BR');
 
   const getStatusLabel = (code) => {
-    const map = { '0': 'Pendente', '1': 'Confirmado', '7': 'Recebido' };
-    return map[code] || 'Desconhecido';
+    const status = { '0': 'Pendente', '1': 'Confirmado', '7': 'Recebido' };
+    return status[code] || 'Desconhecido';
   };
 
 
