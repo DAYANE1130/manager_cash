@@ -1,0 +1,42 @@
+img{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  border:blueviolet;
+  background-color: blue;
+}
+
+.notas-fiscais{
+  display: flex;
+}
+.menu {
+  display: flex;
+}
+
+.notas-fiscais-header{
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.notas-fiscais-sidebar{
+  margin-top:15px
+}
+.header-page{
+  margin-top:88px
+}
+/* .sidebar{
+  background-color: gray;
+} */
+
+.section{
+  margin-left: 10px;
+}
+
+/* body{
+  background-color: red;
+} */

@@ -22,7 +22,7 @@ const Invoice = ({ order, onClickProvider }) => {
       <td>{formatDate(order.emissionDate)}</td>
       <td>{getStatusLabel(order.orderStatusBuyer)}</td>
       <td>
-        <button onClick={onClickProvider}>Dados do cedente</button>
+        <button type="button" class="btn btn-light" onClick={onClickProvider}>Dados do cedente</button>
       </td>
     </tr>
   );

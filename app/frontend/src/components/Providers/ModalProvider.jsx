@@ -8,12 +8,15 @@ const ModalProvider = ({ isOpen, onClose, provider }) => {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} contentLabel="Dados do Cedente">
-      <h2>Dados do Cedente</h2>
-      <p><strong>Nome:</strong> {provider.name}</p>
-      <p><strong>Trading Name:</strong> {provider.tradingName}</p>
-      <p><strong>CNPJ:</strong> {provider.cnpj}</p>
-      <p><strong>E-mail:</strong> {provider.email}</p>
-      <button onClick={onClose}>Fechar</button>
+   
+        <h2>Dados do Cedente</h2>
+        <p><strong>Nome:</strong> {provider.name}</p>
+        <p><strong>Trading Name:</strong> {provider.tradingName}</p>
+        <p><strong>CNPJ:</strong> {provider.cnpj}</p>
+        <p><strong>E-mail:</strong> {provider.email}</p>
+        <button onClick={onClose}>Fechar</button>
+   
+
     </Modal>
   );
 };

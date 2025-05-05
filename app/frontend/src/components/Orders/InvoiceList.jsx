@@ -37,10 +37,8 @@ const InvoiceList = () => {
 
   return (
     <div>
-      {/* <h2>Notas Fiscais</h2>
-      <br></br>
-      <p>Visualize as notas fiscais que você tem:</p> */}
-      <table>
+
+      <table class="table table-hover">
         <thead>
           <tr>
             <th>Nota Fiscal</th>
