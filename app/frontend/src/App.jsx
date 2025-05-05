@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import InvoiceList from './components/Orders/InvoiceList';
 
 function App() {

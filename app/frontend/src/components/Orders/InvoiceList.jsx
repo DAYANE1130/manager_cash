@@ -3,7 +3,7 @@ import fetchOrdersApi from '../../services/api';
 import Invoice from './Invoice';
 import ModalProvider from '../Providers/ModalProvider';
 
-const ListInvoice = () => {
+const InvoiceList = () => {
   const [invoices, setInvoices] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProvider, setselectedProvider] = useState(null);
@@ -19,7 +19,7 @@ const ListInvoice = () => {
     setselectedProvider(null)
   }
 
-console.log('eusu o cnopj', invoices)
+
   useEffect(() => {
     const fetchData = async () => {
       const { data, erro } = await fetchOrdersApi();
@@ -37,9 +37,9 @@ console.log('eusu o cnopj', invoices)
 
   return (
     <div>
-      <h2>Notas Fiscais</h2>
+      {/* <h2>Notas Fiscais</h2>
       <br></br>
-      <p>Visualize as notas fiscais que você tem:</p>
+      <p>Visualize as notas fiscais que você tem:</p> */}
       <table>
         <thead>
           <tr>
@@ -70,4 +70,4 @@ console.log('eusu o cnopj', invoices)
   );
 };
 
-export default ListInvoice;
+export default InvoiceList;

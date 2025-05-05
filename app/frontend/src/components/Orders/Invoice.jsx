@@ -12,7 +12,6 @@ const Invoice = ({ order, onClickProvider }) => {
     return map[code] || 'Desconhecido';
   };
 
-  console.log('eu sou os dados do provider', order.provider, order.cnpj)
 
   return (
     <tr>
