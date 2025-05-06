@@ -56,7 +56,7 @@ npm install
 
     Inicie o servidor:
 
-npm start
+npm run dev
 
     O backend estará disponível em http://localhost:3001
 
@@ -72,7 +72,7 @@ npm install
 
     Inicie a aplicação:
 
-npm start
+npm run dev
 
     O frontend estará disponível em http://localhost:5173/invoices
 
