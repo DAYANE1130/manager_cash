@@ -9,6 +9,9 @@ O projeto tem como objetivo exibir informações de uma lista de notas fiscais c
 ![image](https://github.com/user-attachments/assets/5e6ceda3-9b3a-4a7f-b904-72bb30f85f02)
 
 
+
+![image](https://github.com/user-attachments/assets/160d3580-ea2e-4a77-9877-2dd440648a5d)
+
 ---
 
 ## 🧰 Tecnologias Utilizadas
