@@ -52,8 +52,6 @@ npm install
 
     Preencha suas credenciais no arquivo .env (você pode usar .env.example como base)
 
-    Execute as migrations (caso esteja utilizando Sequelize CLI)
-
     Inicie o servidor:
 
 npm run dev
