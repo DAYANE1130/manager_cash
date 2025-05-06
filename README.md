@@ -16,6 +16,7 @@ O projeto tem como objetivo exibir uma lista de notas fiscais consumidas a parti
 - MySQL
 - Sequelize
 - Middleware de erro customizado
+- Postman
 
 ### Frontend
 - React
