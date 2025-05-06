@@ -1,4 +1,3 @@
-// src/pages/InvoicesPage.jsx
 import React from 'react';
 import Sidebar from '../components/SideBar';
 import HeaderPage from '../components/HeaderPage';
