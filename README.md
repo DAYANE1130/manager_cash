@@ -75,8 +75,9 @@ npm start
 
     O frontend estará disponível em http://localhost:3000
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
+```bash
 app
 ├── backend
 │   ├── controllers
@@ -91,6 +92,7 @@ app
     ├── services
     ├── assets
     └── ...
+```
 
 🔄 Fluxo do Backend
 
