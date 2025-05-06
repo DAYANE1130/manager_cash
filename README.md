@@ -73,7 +73,7 @@ npm install
 
 npm start
 
-    O frontend estará disponível em http://localhost:3000
+    O frontend estará disponível em http://localhost:5173/invoices
 
 ## 📂 Estrutura do Projeto
 
@@ -104,6 +104,8 @@ app
 
 ✅ Funcionalidades do Frontend
 
+Acessível na url : http://localhost:5173/invoices
+
     Página principal com layout semântico
 
     Sidebar e Header separados em componentes
@@ -122,4 +124,5 @@ app
 
     Implementar autenticação
 
+## Documentação API: https://documenter.getpostman.com/view/31041446/2sB2j6AWXa
 
