@@ -15,6 +15,9 @@ const getAllOrders = async () => {
 
     ],
   });
+
+  if(!orders) return false;
+  
   return orders;
 };
 

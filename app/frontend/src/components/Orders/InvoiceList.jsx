@@ -36,8 +36,8 @@ const InvoiceList = () => {
   }, []);
 
   return (
+    
     <div>
-
       <table class="table table-hover">
         <thead>
           <tr>

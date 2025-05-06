@@ -6,11 +6,11 @@ async function fetchOrdersApi() {
     const response = await fetch(URL);
 
     const data = await response.json();
-
+    
     if (response.ok) {
       return { data, erro: undefined }; // Sucesso
     } else {
-      return { data: undefined, erro: data }; // Erro
+      return { data: undefined, erro: data.message }; // Erro
     }
   } catch (error) {
     console.error(error);
@@ -20,7 +20,7 @@ async function fetchOrdersApi() {
       data: undefined,
       erro: {
         error_code: "FETCH_ERROR",
-        error_description: "Não foi possível buscar a lista de orders.",
+        error_description: data.message || 'Erro ao buscar dados.',
       },
     };
   }
