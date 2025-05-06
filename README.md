@@ -6,6 +6,9 @@ Projeto técnico para exibir notas fiscais utilizando uma API REST e uma interfa
 
 O projeto tem como objetivo exibir informações de uma lista de notas fiscais consumidas a partir de uma API construida com Node, Express e Sequelize. A aplicação foi construída com foco em boas práticas de desenvolvimento, organização de camadas e uso semântico de HTML.
 
+![image](https://github.com/user-attachments/assets/5e6ceda3-9b3a-4a7f-b904-72bb30f85f02)
+
+
 ---
 
 ## 🧰 Tecnologias Utilizadas
