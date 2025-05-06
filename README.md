@@ -4,7 +4,7 @@ Projeto técnico para exibir notas fiscais utilizando uma API REST e uma interfa
 
 ## 📌 Objetivo
 
-O projeto tem como objetivo exibir uma lista de notas fiscais consumidas a partir de uma API. A aplicação foi construída com foco em boas práticas de desenvolvimento, organização de camadas e uso semântico de HTML.
+O projeto tem como objetivo exibir informações de uma lista de notas fiscais consumidas a partir de uma API construida com Node, Express e Sequelize. A aplicação foi construída com foco em boas práticas de desenvolvimento, organização de camadas e uso semântico de HTML.
 
 ---
 
@@ -17,6 +17,7 @@ O projeto tem como objetivo exibir uma lista de notas fiscais consumidas a parti
 - Sequelize
 - Middleware de erro customizado
 - Postman
+- Arquitetura MSC(Model, Service e Controller)
 
 ### Frontend
 - React
